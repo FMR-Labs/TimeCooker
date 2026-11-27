@@ -43,14 +43,6 @@ Host (any fs, 1-2 ch)
  → [fs ≠ 48 kHz] resampling → host fs
 ```
 
-## Level indicators
-
-| Indicator | Measured | Green | Orange | Red |
-|---|---|---|---|---|
-| Input LED | Level after PreGain | below -9 dB | below -3 dB | above |
-
-Input LED thresholds are relative to a 4.5 full scale.
-
 ---
 
 ## Installation (Windows)

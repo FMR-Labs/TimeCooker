@@ -1,0 +1,21 @@
+# Fonts and images embedded in the plugin: not published (see THIRD_PARTY.md)
+resources/fonts/
+resources/img/
+/img/
+*.ttf
+*.otf
+
+# Build output
+build/
+out/
+.vs/
+.vscode/
+*.user
+*.vst3
+*.zip
+
+# release directory
+release/
+
+# old directory
+old/

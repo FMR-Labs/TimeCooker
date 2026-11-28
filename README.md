@@ -33,6 +33,47 @@ Distributed as a free **Windows VST3** plugin by [FMR Labs](https://github.com/F
 * Runs at any host sample rate: the engine works at 48 kHz, with automatic resampling when the host runs at another rate. The resampler latency is reported to the host.
 * Lightweight: small algorithmic tasks, no allocation or lock on the audio thread
 
+## How it works
+
+### Modulation
+Activated with the **left footswitch**.
+
+| Control | Function |
+|---|---|
+| Mode | Selects the modulation mode (left = 0, center = 1, right = 2). |
+| Rate | LFO speed. |
+| Mix | Balance between dry and wet signals. |
+| Width | LFO amplitude. |
+
+**Modulation modes:**
+
+| Effect | Mode 0 | Mode 1 | Mode 2 |
+|---|---|---|---|
+| **Chorus** | 1 tap | 2 taps, phase opposition | 4 taps, sine and cosine at different times |
+| **Rotary** | Bass and treble modulated | Treble only | Bass only |
+| **Flanger** | Basic | Through-zero | Double through-zero, phase opposition |
+| **Phaser** | 2 stages | 6 stages | 12 stages |
+
+**Flanger feedback:**
+- Width left of noon: negative feedback.
+- Width right of noon: positive feedback.
+
+### Tremolo
+Activated with the **right footswitch**.
+
+| Control | Function |
+|---|---|
+| Speed | LFO speed. Left of noon = sine wave; right of noon = square wave. |
+| TR/HA | LFO width. Left of noon = normal mode; right of noon = harmonic mode. |
+
+**Tremolo synchronization modes:**
+
+| Mode | Function |
+|---|---|
+| **Free** | Tremolo LFO runs independently, with its speed controlled by Speed. |
+| **S+** | Tremolo LFO is synchronized with the modulation LFO, in phase. |
+| **S-** | Tremolo LFO is synchronized with the modulation LFO, in phase opposition. |
+
 ## Signal chain
 
 ```
